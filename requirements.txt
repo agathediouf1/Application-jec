@@ -1,0 +1,7 @@
+Django>=5.0,<6
+Pillow>=10
+mammoth>=1.6
+anthropic>=0.40
+pypdf>=4
+segno>=1.6
+psycopg[binary]>=3.1

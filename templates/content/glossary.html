@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Glossaire — JEC Sénégal{% endblock %}{% block content %}
+<div class="page-wrap"><div class="page-header"><div class="label">Comprendre le mouvement</div><h2>Glossaire de la JEC</h2><p>Les définitions des mots et expressions utilisés dans les documents de la JEC.</p></div>
+<div class="card-grid-2">{% for d in defs %}<article class="card top-blue"><h4>{{ d.term }}</h4><p>{{ d.definition }}</p>{% if d.source %}<p class="f-count"><i class="bi bi-journal-text"></i> Source : {{ d.source }}</p>{% endif %}</article>{% empty %}<p>Aucune définition pour le moment.</p>{% endfor %}</div></div>{% endblock %}

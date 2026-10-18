@@ -1,0 +1,3 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Équipe nationale — JEC Sénégal{% endblock %}{% block content %}
+<div class="page-wrap"><div class="page-header"><div class="label">Le Mouvement</div><h2>Équipe nationale 2025–2028</h2></div><div class="team-grid">{% for l in team %}<div class="team-card"><div class="team-av">{{ l.initials }}</div><h4>{{ l.full_name }}</h4><div class="poste">{{ l.title }}</div></div>{% empty %}<p>Équipe non renseignée.</p>{% endfor %}</div></div>{% endblock %}

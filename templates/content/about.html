@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Qui sommes-nous ? — JEC Sénégal{% endblock %}{% block content %}
+<div class="page-wrap"><div class="page-header"><div class="label">Le Mouvement</div><h2>Qui sommes-nous ?</h2><p>La JEC est un mouvement d'Action Catholique spécialisé au monde scolaire, œuvrant pour la transformation positive du milieu éducatif sénégalais.</p></div>
+{% include "content/about_presentation.html" %}
+<h3 class="act-section-title"><i class="bi bi-people-fill"></i> Équipe nationale</h3><div class="team-grid">{% for l in team %}<div class="team-card"><div class="team-av">{{ l.initials }}</div><h4>{{ l.full_name }}</h4><div class="poste">{{ l.title }}</div></div>{% empty %}<p>Équipe non renseignée.</p>{% endfor %}</div>
+<h3 class="act-section-title"><i class="bi bi-shield-check"></i> Signes de la JEC</h3>{% include "content/about_signes.html" %}</div>{% endblock %}

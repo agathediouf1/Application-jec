@@ -1,0 +1,56 @@
+{% load static %}<!DOCTYPE html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}JEC Sénégal — Jeunesse Étudiante Catholique{% endblock %}</title>
+<meta name="description" content="Site officiel de la Jeunesse Étudiante Catholique du Sénégal (JEC/S).">
+<meta name="theme-color" content="#1E6FD9"><meta name="csrf-token" content="{{ csrf_token }}"><link rel="manifest" href="{% url 'manifest' %}"><link rel="apple-touch-icon" href="{% static 'images/pwa/apple-touch-icon.png' %}"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="JEC"><link rel="icon" href="{% static 'images/logo.png' %}">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.min.css' %}" rel="stylesheet"><link href="{% static 'css/legacy.css' %}" rel="stylesheet"><link href="{% static 'css/site.css' %}" rel="stylesheet"><link href="{% static 'css/assistant.css' %}" rel="stylesheet">
+</head><body>
+<div id="welcome" role="dialog" aria-label="Bienvenue"><div class="w-card"><img src="{% static 'images/logo.png' %}" alt="Logo JEC" width="90" height="97"><h2>Bienvenue sur le site de la Jeunesse Étudiante Catholique</h2><p>Voir — Réfléchir — Agir <i class="bi bi-heart-fill" style="color:#1E6FD9"></i><i class="bi bi-heart" style="color:#1E6FD9"></i></p><button class="btn" id="w-ok">Entrer sur le site</button></div></div>
+<a class="skip-link" href="#main">Aller au contenu</a>
+<header>
+  <a href="{% url 'home' %}" class="brand"><img src="{% static 'images/logo.png' %}" alt="Logo de la JEC Sénégal" width="42" height="42"><div class="brand-text"><strong>JEC Sénégal</strong><small>Jeunesse Étudiante Catholique</small></div></a>
+  <nav class="main-nav" aria-label="Navigation principale">
+    {% for i in nav_items %}<a href="{{ i.url }}" class="{% if i.active %}active{% endif %}">{{ i.label }}</a>{% endfor %}
+    {% if user.is_authenticated %}{% if user.is_staff %}<a class="join-btn" href="{% url 'manage:dashboard' %}"><i class="bi bi-speedometer2"></i> Tableau de bord</a>{% endif %}<form method="post" action="{% url 'logout' %}" class="logout-f">{% csrf_token %}<button class="out-btn" title="Déconnexion" aria-label="Déconnexion"><i class="bi bi-box-arrow-right"></i></button></form>{% else %}<a class="join-btn" href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i> Connexion</a>{% endif %}
+  </nav>
+  <button class="ai-btn" data-assistant aria-expanded="false" aria-label="Ouvrir l'assistant JEC"><i class="bi bi-stars"></i><span>Assistant JEC</span></button>
+  <button class="app-btn" data-app-open aria-label="Installer l'application (QR code)" title="Installer l'application"><i class="bi bi-qr-code"></i><span>Application</span></button>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-nav" id="mob-nav"><div class="mobile-drawer">
+  {% for i in nav_items %}<a href="{{ i.url }}">{{ i.label }}</a>{% endfor %}
+  <a href="#" data-app-open><i class="bi bi-qr-code"></i> Installer l'application</a>
+  {% if user.is_authenticated %}{% if user.is_staff %}<a class="m-join" href="{% url 'manage:dashboard' %}"><i class="bi bi-speedometer2"></i> Tableau de bord</a>{% endif %}<form method="post" action="{% url 'logout' %}">{% csrf_token %}<button class="m-out"><i class="bi bi-box-arrow-right"></i> Déconnexion</button></form>{% else %}<a class="m-join" href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i> Connexion</a>{% endif %}
+</div></div>
+{% if messages %}<div class="flash">{% for m in messages %}<p>{{ m }}</p>{% endfor %}</div>{% endif %}
+<main id="main">{% block content %}{% endblock %}</main>
+<footer class="site-footer"><div class="footer-inner">
+<div class="footer-top">
+  <div class="f-col"><div class="footer-brand"><img src="{% static 'images/logo.png' %}" alt="" class="footer-logo" width="46" height="46"><strong>JEC Sénégal</strong></div>
+    <p class="footer-about">La Jeunesse Étudiante Catholique du Sénégal est un mouvement d'action catholique spécialisé dans le milieu scolaire et universitaire. Affiliée à la JEC Internationale.</p>
+    <p class="f-devise"><i class="bi bi-stars"></i> Voir — Réfléchir — Agir</p></div>
+  <div class="f-col"><h5>Navigation</h5><ul>{% for i in nav_items %}<li><a href="{{ i.url }}"><i class="bi bi-chevron-right"></i>{{ i.label }}</a></li>{% endfor %}<li><a href="{% url 'glossary' %}"><i class="bi bi-chevron-right"></i>Glossaire</a></li></ul></div>
+  <div class="f-col"><h5>Nous contacter</h5><ul class="f-contact">
+    <li><i class="bi bi-geo-alt-fill"></i><span>Centrale des Œuvres Catholiques et Apostoliques, 4 allées Papa Guèye Fall, Dakar</span></li>
+    <li><i class="bi bi-envelope-fill"></i><a href="mailto:ycs.jecsenegal@gmail.com">ycs.jecsenegal@gmail.com</a></li>
+    <li><i class="bi bi-telephone-fill"></i><span>+221 77 803 37 71<br>+221 78 541 80 70<br>+221 77 431 21 05</span></li>
+    <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/221778033771" target="_blank" rel="noopener">Écrire sur WhatsApp</a></li>
+    <li><i class="bi bi-folder-fill"></i><a href="{{ drive_url }}" target="_blank" rel="noopener">Album photos (Google Drive)</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© {% now "Y" %} Jeunesse Étudiante Catholique du Sénégal</span><span>Affiliée à la JEC Internationale</span></div>
+</div></footer>
+<div class="appm" id="appm" hidden role="dialog" aria-modal="true" aria-labelledby="appm-t"><div class="appm-box">
+<button class="appm-x" aria-label="Fermer"><i class="bi bi-x-lg"></i></button>
+<h3 id="appm-t"><i class="bi bi-phone"></i> Installer l'application JEC Sénégal</h3>
+{% if qr_is_local %}<p class="appm-warn"><i class="bi bi-exclamation-triangle-fill"></i> Vous consultez le site depuis cet ordinateur (adresse locale) : un téléphone ne pourra pas ouvrir ce code. Définissez la variable SITE_URL, ou ouvrez le site avec l'adresse IP de l'ordinateur sur le même Wi-Fi.</p>{% endif %}
+<div class="appm-grid"><div class="appm-qr"><img src="{% url 'qr' 'svg' %}" alt="QR code pour ouvrir le site JEC Sénégal" width="220" height="220"><small>{{ site_url }}</small></div>
+<div class="appm-steps"><p><strong>1.</strong> Ouvrez l'appareil photo de votre téléphone et scannez ce code.</p><p><strong>2.</strong> Le site s'ouvre : ajoutez-le à l'écran d'accueil pour l'utiliser comme une application.</p>
+<ul><li><i class="bi bi-android2"></i> <b>Android (Chrome)</b> : menu (trois points) puis « Installer l'application ».</li><li><i class="bi bi-apple"></i> <b>iPhone (Safari)</b> : bouton Partager puis « Sur l'écran d'accueil ».</li></ul></div></div>
+<div class="appm-actions"><button class="appm-install" id="app-install" hidden><i class="bi bi-download"></i> Installer maintenant</button><a class="appm-dl" href="{% url 'qr' 'png' %}" download="qr-jec-senegal.png"><i class="bi bi-image"></i> Télécharger le QR code</a></div>
+</div></div>
+<script src="{% static 'js/app-install.js' %}"></script>
+<script src="{% static 'js/site.js' %}"></script>
+<script src="{% static 'js/assistant.js' %}" data-logo="{% static 'images/logo.png' %}"></script>
+</body></html>

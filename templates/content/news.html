@@ -1,0 +1,4 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Actualités — JEC Sénégal{% endblock %}{% block content %}
+<div class="page-wrap"><div class="page-header"><div class="label">La vie du mouvement</div><h2>Actualités</h2><p>Témoignages, articles et communiqués de la JEC.</p></div>
+<div class="actu-grid">{% for a in articles %}<article class="actu-card">{% if a.image %}<img src="{{ a.image.url }}" alt="" style="width:100%;height:160px;object-fit:cover">{% endif %}<div class="actu-body"><span class="actu-tag">{{ a.get_kind_display }}</span><h4>{{ a.title }}</h4><p>{{ a.body|truncatechars:220 }}</p><div class="actu-date">{{ a.published|date:"d/m/Y" }}</div></div></article>{% empty %}<div class="actu-add"><div class="actu-add-icon"><i class="bi bi-newspaper"></i></div><p>Aucune actualité publiée pour le moment.</p></div>{% endfor %}</div></div>{% endblock %}

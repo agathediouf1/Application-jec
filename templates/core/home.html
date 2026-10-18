@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% load static %}
+{% block content %}
+<section class="hero"><div class="hero-bg" aria-hidden="true">{% for s in slides %}<div class="hero-slide{% if forloop.first %} on{% endif %}" data-title="{{ s.title }}" style="background-image:url('{{ s.url }}')"></div>{% endfor %}</div><div class="hero-overlay"></div>
+  <div class="hero-badge">Mouvement d'Action Catholique · Sénégal</div>
+  
+  <h1><span>Jeunesse <em>Étudiante</em></span><span>Catholique du Sénégal</span></h1>
+  <p class="hero-devise"><i class="bi bi-stars"></i> Voir — Réfléchir — Agir <i class="bi bi-stars"></i></p>
+  <p>La JEC est un mouvement de jeunes étudiants catholiques qui, par la foi, la formation et l’action, s’engagent à transformer leur milieu scolaire, universitaire et leur société.</p>
+  <div class="hero-btns"><a class="btn btn-w" href="{% url 'about' %}"><i class="bi bi-stars"></i> Découvrir la JEC</a><a class="btn btn-o" href="{% url 'contact' %}">Nous rejoindre <i class="bi bi-arrow-right"></i></a></div>
+<div class="hero-cap" id="hero-cap">{{ slides.0.title }}</div></section>
+<div class="stats">{% for label,n in stats %}<div class="stat"><div class="stat-n">{{ n }}</div><div class="stat-l">{{ label }}</div></div>{% endfor %}</div>
+<div class="band"><div class="page-wrap"><div class="card-grid-3">
+  <a class="card top-blue" href="{% url 'about' %}"><div class="card-icon"><i class="bi bi-people-fill"></i></div><h4>Qui sommes-nous ?</h4><p>Identité, mission, équipe nationale et signes de la JEC.</p></a>
+  <a class="card top-blue" href="{% url 'activities' %}"><div class="card-icon"><i class="bi bi-bullseye"></i></div><h4>Nos activités</h4><p>Plan d'action 2025–2028, rencontres et recommandations.</p></a>
+  <a class="card top-blue" href="{% url 'documents' %}"><div class="card-icon"><i class="bi bi-folder2-open"></i></div><h4>Documentation</h4><p>Statuts, règlement intérieur, guides de formation, hymne.</p></a>
+</div></div></div>
+<div class="page-wrap"><div class="page-header"><div class="label">Sur le terrain</div><h2>Les fédérations</h2></div>
+  <div class="card-grid-3">{% for f in federations %}<a class="card" href="{{ f.get_absolute_url }}"><div class="fed-emblem" style="margin-bottom:12px"><img src="{% static 'images/logo.png' %}" alt=""></div><h4>{{ f.name }}</h4><p>{{ f.tagline }}</p><p class="f-count"><i class="bi bi-building"></i> {{ f.n }} section{{ f.n|pluralize }}</p></a>{% empty %}<p>Aucune fédération publiée.</p>{% endfor %}</div></div>
+<div class="band"><div class="page-wrap"><div class="page-header"><div class="label">La vie du mouvement</div><h2>Dernières actualités</h2></div>
+  <div class="actu-grid">{% for a in news %}<div class="actu-card"><div class="actu-body"><span class="actu-tag">{{ a.get_kind_display }}</span><h4>{{ a.title }}</h4><p>{{ a.summary }}</p><div class="actu-date">{{ a.published|date:"d/m/Y" }}</div></div></div>{% empty %}<div class="actu-add"><p>Aucune actualité publiée pour le moment.</p></div>{% endfor %}</div>
+  <h3 class="act-section-title" style="margin-top:40px">Prochaines activités</h3>
+  <div class="card-grid-3">{% for a in upcoming %}<div class="card"><h4>{{ a.title }}</h4><p><i class="bi bi-calendar-event"></i> {{ a.date|date:"d/m/Y" }} {% if a.place %}· <i class="bi bi-geo-alt-fill"></i> {{ a.place }}{% endif %}</p></div>{% empty %}<div class="soon"><span class="soon-tag">À venir</span><p>Le calendrier sera publié ici.</p></div>{% endfor %}</div></div></div>
+{% endblock %}

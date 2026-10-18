@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Nos activités — JEC Sénégal{% endblock %}{% block content %}
+<div class="page-wrap"><div class="page-header"><div class="label">Ce que nous faisons</div><h2>Nos Activités</h2><p>Calendrier, plan d'action, rencontres et recommandations du Conseil National.</p></div>
+<h3 class="act-section-title"><i class="bi bi-calendar-event"></i> Calendrier</h3><div class="card-grid-3">{% for a in upcoming %}<div class="card top-blue"><h4>{{ a.title }}</h4><p><i class="bi bi-calendar-event"></i> {{ a.date|date:"d/m/Y" }} {% if a.place %}· <i class="bi bi-geo-alt-fill"></i> {{ a.place }}{% endif %}</p><p>{{ a.description }}</p></div>{% empty %}<div class="soon"><span class="soon-tag">À venir</span><p>Aucune activité programmée pour le moment.</p></div>{% endfor %}</div>
+{% if past %}<h4 style="margin:24px 0 10px">Activités passées</h4><div class="card-grid-3">{% for a in past %}<div class="card"><h4>{{ a.title }}</h4><p>{{ a.date|date:"d/m/Y" }}</p></div>{% endfor %}</div>{% endif %}
+<h3 class="act-section-title"><i class="bi bi-bullseye"></i> Plan d'Action 2025–2028</h3>{% include "content/act_plan.html" %}
+<h3 class="act-section-title"><i class="bi bi-people"></i> Rencontres</h3>{% include "content/act_rencontres.html" %}
+<h3 class="act-section-title"><i class="bi bi-check-circle-fill"></i> Recommandations</h3><div class="reco-block">{% include "content/act_recommandations.html" %}</div></div>{% endblock %}

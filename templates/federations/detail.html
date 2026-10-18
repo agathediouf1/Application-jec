@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}{{ fed.name }} — JEC Sénégal{% endblock %}{% block content %}
+<div class="page-wrap"><div class="fed-panel-wrap"><div class="fed-head"><div><h3>{{ fed.name }}</h3><p>{{ fed.tagline }}</p></div><div class="fed-emblem"><img src="{% static 'images/logo.png' %}" alt="Logo"></div></div>
+{% if coordinators %}<div class="fed-coords"><h5>Coordonnateurs nationaux</h5><ul>{% for c in coordinators %}<li>{{ c.full_name }}</li>{% endfor %}</ul></div>{% endif %}
+<h4 class="act-section-title"><i class="bi bi-people-fill"></i> Équipe</h4><div class="team-grid">{% for l in team %}<div class="team-card"><div class="team-av">{{ l.initials }}</div><h4>{{ l.full_name }}</h4><div class="poste">{{ l.title }}</div></div>{% empty %}<p>Aucun responsable renseigné.</p>{% endfor %}</div>
+<h4 class="act-section-title"><i class="bi bi-building"></i> Sections / cellules ({{ sections|length }})</h4><div class="section-grid">{% for s in sections %}<div class="section-chip">{{ s.name }}</div>{% empty %}<p>Aucune section renseignée.</p>{% endfor %}</div></div>
+<p style="margin-top:20px"><a href="{% url 'federations:list' %}"><i class="bi bi-arrow-left"></i> Toutes les fédérations</a></p></div>{% endblock %}
