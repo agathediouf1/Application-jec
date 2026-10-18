@@ -1,0 +1,557 @@
+{
+ "national": [
+  {
+   "name": "Jeannot DIATTA",
+   "poste": "Responsable National"
+  },
+  {
+   "name": "St. Mathias Samba NDIAYE",
+   "poste": "Secrétaire Général"
+  },
+  {
+   "name": "Prosper Diène NDONG",
+   "poste": "Adjoint Secrétaire Général"
+  },
+  {
+   "name": "Éléonore Aguélie SAMBOU",
+   "poste": "Trésorière Générale"
+  },
+  {
+   "name": "O. Pascal Dominique WADE",
+   "poste": "Adjoint Trésorier Général"
+  },
+  {
+   "name": "Simon Sédar SENGHOR",
+   "poste": "Chargé de la Formation"
+  },
+  {
+   "name": "Robert Mamour DIOUF",
+   "poste": "Adjoint Formation"
+  },
+  {
+   "name": "Daniel Jean Loïc COLY",
+   "poste": "Chargé Projets & Suivi"
+  },
+  {
+   "name": "Françoise Ephygénie DIOUF",
+   "poste": "Chargée Communication"
+  },
+  {
+   "name": "Jean Pierre Seydou Diouf",
+   "poste": "Adjoint Chargé de Communication"
+  },
+  {
+   "name": "Joséphine Awa Diouf",
+   "poste": "Adjointe Chargé des Programmes, Suivi et Évaluation"
+  }
+ ],
+ "federations": [
+  {
+   "slug": "dakar",
+   "name": "Fédération de Dakar",
+   "tagline": "Capitale du mouvement — cœur battant de la JEC au Sénégal",
+   "emblem": "DK",
+   "coordinators": [
+    "Jeannot DIATTA",
+    "Simon Sédar SENGHOR",
+    "Éléonore Aguélie SAMBOU"
+   ],
+   "team": [
+    {
+     "name": "Anna Manga",
+     "poste": "Responsable Fédérale"
+    },
+    {
+     "name": "Ornella Adjoké Amoussou",
+     "poste": "Secrétaire Générale"
+    },
+    {
+     "name": "Belinda Mendy",
+     "poste": "Secrétaire Générale Adjointe"
+    },
+    {
+     "name": "Joséphine Loum",
+     "poste": "Trésorière Générale"
+    },
+    {
+     "name": "Mathurin Gomis",
+     "poste": "Trésorièr Générale adjoint"
+    },
+    {
+     "name": "Simon Edan",
+     "poste": "Chargé de la Formation"
+    },
+    {
+     "name": "Bernard Alves Ka",
+     "poste": "Chargé de la Formation Adjoint"
+    },
+    {
+     "name": "François Séne",
+     "poste": "Chargé de la Communication"
+    },
+    {
+     "name": "Paul Diagne Séne",
+     "poste": "Chargé de la Communication Adjoint"
+    },
+    {
+     "name": "Madeleine Diouf",
+     "poste": "Chargée de l'Organisation"
+    },
+    {
+     "name": "Léopold Senghor",
+     "poste": "Chargé de l'Organisation Adjoint"
+    },
+    {
+     "name": "Jean Pierre Manga",
+     "poste": "Chargé de l'Organisation Adjoint"
+    }
+   ],
+   "sections": [
+    "Saint Joseph de médina",
+    "Saint Martyrs de l'Ouganda",
+    "Saint Paul de grand yoff",
+    "Sainte Thérèse de grand dakar",
+    "Saint François d'Assise de keur massar",
+    "Saint Jean Paul II de guédiawaye",
+    "Bienheur Édouard Poppe de yembeul",
+    "Notre Dame des Anges de ouakam",
+    "Jec Cadette"
+   ]
+  },
+  {
+   "slug": "thies",
+   "name": "Fédération de Thiès",
+   "tagline": "Dynamisme et engagement dans la région de Thiès",
+   "emblem": "TH",
+   "coordinators": [
+    "Jeannot DIATTA",
+    "Joséphine Awa DIOUF",
+    "Jean Pierre Seydou DIOUF"
+   ],
+   "team": [
+    {
+     "name": "Pauline Sanou FAYE",
+     "poste": "Responsable"
+    },
+    {
+     "name": "N'soko Emmanuel LUMUENO",
+     "poste": "Secrétaire Général"
+    },
+    {
+     "name": "Catherine Marie Rose Angèle DEVIS",
+     "poste": "Adjoint du Secrétaire Général"
+    },
+    {
+     "name": "Marie Louise MBAYE",
+     "poste": "Trésorier Général"
+    },
+    {
+     "name": "Gisella Maryse DIOUF",
+     "poste": "Adjoint du Trésorier Général"
+    },
+    {
+     "name": "Ephigenie Émilie Yandé NDONG",
+     "poste": "Chargé de la Formation"
+    },
+    {
+     "name": "Jama",
+     "poste": "Adjoint Chargé de la Formation"
+    },
+    {
+     "name": "Chantal Mathieu Coumba THIAW",
+     "poste": "Chargé de l'Organisation"
+    },
+    {
+     "name": "Jacqueline Anne Marie Coumba NDONG",
+     "poste": "Adjoint Chargé de l'Organisation"
+    },
+    {
+     "name": "Étienne Barthélémy DIOKH",
+     "poste": "Chargé de la Communication"
+    },
+    {
+     "name": "David Filit Samoka DRAMOU",
+     "poste": "Adjoint Chargé de la Communication"
+    }
+   ],
+   "sections": [
+    "Sainte Anne",
+    "Mboro",
+    "Marie Reine"
+   ]
+  },
+  {
+   "slug": "petite-cote",
+   "name": "Fédération de la Petite Côte",
+   "tagline": "Foi et jeunesse sur le littoral sénégalais",
+   "emblem": "PC",
+   "coordinators": [
+    "Françoise Ephygénie DIOUF",
+    "Prosper Diène NDONG",
+    "St. Mathias Samba NDIAYE"
+   ],
+   "team": [
+    {
+     "name": "Gabriel Edouard Faye",
+     "poste": "Responsable Fédéral"
+    },
+    {
+     "name": "Marie Pascale Sene",
+     "poste": "Secrétaire Générale"
+    },
+    {
+     "name": "Henriette Mendy",
+     "poste": "Adjointe Secrétaire Générale"
+    },
+    {
+     "name": "Elisabeth Faye",
+     "poste": "Trésorière"
+    },
+    {
+     "name": "Marie Madeleine Ngom",
+     "poste": "Adjointe Trésorière"
+    },
+    {
+     "name": "Charles Boniface Yves Diatta",
+     "poste": "Chargé Formation & Organisation"
+    },
+    {
+     "name": "Evelina Basse",
+     "poste": "Adjointe Formation & Organisation"
+    },
+    {
+     "name": "Paola Ndour",
+     "poste": "Chargée Communication"
+    },
+    {
+     "name": "Anna Helene Badji",
+     "poste": "Adjointe Communication"
+    }
+   ],
+   "sections": [
+    "Sainte Élisabeth de Hongrie",
+    "Sainte Marthe",
+    "Saint Joseph",
+    "Épiphanie du Seigneur de Nianing",
+    "Notre Dame de la Purification",
+    "Jec Cadette CFP Abbé David Boilat",
+    "Saint André"
+   ]
+  },
+  {
+   "slug": "sine",
+   "name": "Fédération du Sine",
+   "tagline": "Enracinement culturel et spirituel dans le Sine",
+   "emblem": "SN",
+   "coordinators": [
+    "Robert Mamour DIOUF",
+    "Joséphine Awa DIOUF",
+    "Simon Sédar SENGHOR"
+   ],
+   "team": [
+    {
+     "name": "Marie Louise Seynabou Faye",
+     "poste": "Responsable Fédérale"
+    },
+    {
+     "name": "Félicité Seynabou Dieng",
+     "poste": "Adjointe Responsable"
+    },
+    {
+     "name": "Solange Ami Sarr",
+     "poste": "Secrétaire Générale"
+    },
+    {
+     "name": "Jeanne Marie Ndong",
+     "poste": "Adjointe Secrétaire"
+    },
+    {
+     "name": "Charlotte Mariane Ndiaye",
+     "poste": "Trésorière Générale"
+    },
+    {
+     "name": "Rose Sene",
+     "poste": "Adjointe Trésorière"
+    },
+    {
+     "name": "Pascal Djibril Diouf",
+     "poste": "Chargé de la Communication"
+    },
+    {
+     "name": "François Sarr",
+     "poste": "Adjoint Chargé de la Communication"
+    },
+    {
+     "name": "Antoine Ndour",
+     "poste": "Chargé de l'Organisation"
+    },
+    {
+     "name": "Françoise Victoria Ba",
+     "poste": "Adjointe Chargée de l'Organisation"
+    }
+   ],
+   "sections": [
+    "Niakhar",
+    "Bicole",
+    "Fatick",
+    "Ndiaganiao",
+    "Diohine",
+    "Sandiara",
+    "Thiadiaye"
+   ]
+  },
+  {
+   "slug": "kaolack",
+   "name": "Fédération de Kaolack",
+   "tagline": "Rayonnement et témoignage dans le centre du Sénégal",
+   "emblem": "KL",
+   "coordinators": [
+    "St. Mathias Samba NDIAYE",
+    "Françoise Ephygénie DIOUF",
+    "Ousmane Pascal Dominique WADE"
+   ],
+   "team": [
+    {
+     "name": "Marie Christiane Samb",
+     "poste": "Responsable Fédérale"
+    },
+    {
+     "name": "Anna Serme",
+     "poste": "Secrétaire"
+    },
+    {
+     "name": "Véronique Gomis",
+     "poste": "Trésorière"
+    },
+    {
+     "name": "Jeanne Nicol",
+     "poste": "Chargée de la Communication"
+    },
+    {
+     "name": "Gaby Diouf",
+     "poste": "Adjoint Chargé de la Communication"
+    },
+    {
+     "name": "Angélique Awa Fall",
+     "poste": "Chargée de la Formation"
+    },
+    {
+     "name": "André Boucar Diouf",
+     "poste": "Adjoint Chargé de la Formation"
+    }
+   ],
+   "sections": [
+    "PI XII",
+    "Guinguineo",
+    "Gossas",
+    "Ndoffane",
+    "Gandiaye"
+   ]
+  },
+  {
+   "slug": "ziguinchor",
+   "name": "Fédération de Ziguinchor",
+   "tagline": "Foi et fraternité en Casamance",
+   "emblem": "ZG",
+   "coordinators": [
+    "Daniel Jean Loïc COLY",
+    "Robert Mamour DIOUF",
+    "Éléonore SAMBOU"
+   ],
+   "team": [
+    {
+     "name": "Félix Mendy",
+     "poste": "Responsable"
+    },
+    {
+     "name": "Ortence Ndiaye",
+     "poste": "Secrétaire Générale"
+    },
+    {
+     "name": "Miler Gomis",
+     "poste": "Adjoint Secrétaire Général"
+    },
+    {
+     "name": "Yolande Diatta",
+     "poste": "Trésorière Générale"
+    },
+    {
+     "name": "Sonia Sambou",
+     "poste": "Adjointe Trésorière Générale"
+    },
+    {
+     "name": "Miriam Rita Manga",
+     "poste": "Chargée de la Formation"
+    },
+    {
+     "name": "Ludovic Basse",
+     "poste": "Adjoint Chargé de la Formation"
+    },
+    {
+     "name": "Léocadie Sisoko",
+     "poste": "Chargée de la Communication"
+    },
+    {
+     "name": "Olivier Asid",
+     "poste": "Adjoint Chargé de la Communication"
+    },
+    {
+     "name": "Yanne Maurice Tendeng",
+     "poste": "Chargé de l'Organisation"
+    },
+    {
+     "name": "Blaise Fonseca",
+     "poste": "Adjoint Chargé de l'Organisation"
+    },
+    {
+     "name": "Gaëtan Martin",
+     "poste": "Conseiller Laïc"
+    },
+    {
+     "name": "Laurent Armand Mendy",
+     "poste": "Conseiller Laïc"
+    },
+    {
+     "name": "Gilbert Nunez",
+     "poste": "Conseiller Laïc"
+    }
+   ],
+   "sections": [
+    "Section Cathédrale",
+    "Section Tiléne",
+    "Section Lyndiane"
+   ]
+  },
+  {
+   "slug": "saint-louis",
+   "name": "Fédération de Saint-Louis",
+   "tagline": "Foi, culture et jeunesse dans la ville du Nord",
+   "emblem": "SL",
+   "coordinators": [
+    "Daniel Jean Loïc COLY",
+    "Jean Pierre Seydou DIOUF",
+    "Ousmane Pascal WADE"
+   ],
+   "team": [
+    {
+     "name": "Serge Emmanuel Bassène",
+     "poste": "Responsable"
+    },
+    {
+     "name": "Ghislain Chimère Diémé",
+     "poste": "Secrétaire Général"
+    },
+    {
+     "name": "Madeleine Téning",
+     "poste": "Adjointe Secrétaire Générale"
+    },
+    {
+     "name": "Pierre Moussa Diouf",
+     "poste": "Trésorier Général"
+    },
+    {
+     "name": "Jeanne Larissa Lambal",
+     "poste": "Adjointe Trésorière Générale"
+    },
+    {
+     "name": "Marie Fatima Célina Faye",
+     "poste": "Chargée de la Communication"
+    },
+    {
+     "name": "Paule Mazarine Kaly",
+     "poste": "Adjointe Chargée de la Communication"
+    },
+    {
+     "name": "Didier Wael Diagne",
+     "poste": "Chargé de la Formation"
+    },
+    {
+     "name": "Anne Stéphanie Manga",
+     "poste": "Adjointe Chargée de la Formation"
+    },
+    {
+     "name": "Antoine Michel Faye",
+     "poste": "Chargé de l'Organisation"
+    },
+    {
+     "name": "Passilva Diatta",
+     "poste": "Adjoint Chargé de l'Organisation"
+    },
+    {
+     "name": "Jean Carlos Mendy",
+     "poste": "Adjoint Chargé de l'Organisation"
+    }
+   ],
+   "sections": [
+    "Section Notre Dame de Lourdes",
+    "Section Thérèse de Louga"
+   ]
+  },
+  {
+   "slug": "universitaire",
+   "name": "Coordination Universitaire — JECU",
+   "tagline": "La JEC au cœur des campus — foi et intelligence au service du monde",
+   "emblem": "🎓",
+   "coordinators": [
+    "Pascal Dominique WADE",
+    "Prosper Diène NDONG",
+    "Daniel Jean Loïc COLY"
+   ],
+   "team": [
+    {
+     "name": "Marie Christine Diouf",
+     "poste": "Responsable"
+    },
+    {
+     "name": "Charles Adrien Gackou",
+     "poste": "Secrétaire Général"
+    },
+    {
+     "name": "Véronique Ndèw Ngom",
+     "poste": "Adjointe Secrétaire"
+    },
+    {
+     "name": "Elian Evrard Bandagny",
+     "poste": "Trésorier Général"
+    },
+    {
+     "name": "Jeanne Marie Dione",
+     "poste": "Adjointe Trésorière"
+    },
+    {
+     "name": "Angélique Ndour",
+     "poste": "Chargée de la Communication"
+    },
+    {
+     "name": "Joachim Gackou",
+     "poste": "Adjoint Chargé de la Communication"
+    },
+    {
+     "name": "Michel Gueye",
+     "poste": "Chargé de la Formation"
+    },
+    {
+     "name": "Antoinette Cellou",
+     "poste": "Adjointe Chargée de la Formation"
+    },
+    {
+     "name": "André Adida Loppy",
+     "poste": "Chargé de l'Organisation"
+    },
+    {
+     "name": "Léopold Diomaye Sene",
+     "poste": "Adjoint Chargé de l'Organisation"
+    },
+    {
+     "name": "Benoît Serme",
+     "poste": "Adjoint Chargé de l'Organisation"
+    }
+   ],
+   "sections": [
+    "Cellule Université Cheikh Anta Diop de Dakar",
+    "Cellule Université Gaston Berger de Saint-Louis",
+    "Cellule Université Assane Seck de Ziguinchor"
+   ]
+  }
+ ]
+}
